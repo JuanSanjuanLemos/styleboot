@@ -1,37 +1,32 @@
-import Image from "next/image";
 import { Container } from "./styles";
 import { AiOutlineShoppingCart } from "react-icons/ai";
-import { Avatar } from "../Avatar";
+import { Avatar } from "../../components/Avatar";
 import Link from "next/link";
 export function Header() {
   return (
     <Container>
       <Link href="/">
-        <div className="header-logo">
-        <Image src="/logo.svg" priority layout="fill" alt="StyleBoot" />
-
-        </div>
+        <img className="l-header-logo" src="/logo.svg" alt="" />
       </Link>
       <nav className="menu">
         <ul className="menu-list">
-          <li className="menu-list-item">
+          <li className="menu-list-item -page">
             <Link href="/masculino">masculino</Link>
           </li>
-          <li className="menu-list-item">
+          <li className="menu-list-item -page">
             <Link href="/feminino">feminino</Link>
           </li>
           <li className="menu-list-item">
             <div className="menu-list-item-profile">
-              <Link href="/perfil" >
+              <Link href="/perfil">
                 <Avatar />
               </Link>
-                Dog
+              dog
             </div>
           </li>
           <li className="menu-list-item">
-              <AiOutlineShoppingCart />
+            <AiOutlineShoppingCart />
           </li>
-
         </ul>
       </nav>
     </Container>
